@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dadan Ramdan Hidayat | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+  <style>
+    :root {
+      --primary: #4fc3f7;
+      --bg: #0b2447;
+      --card: #132347;
+      --text-light: #b0c4de;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #19376d;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .landing {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(to bottom, #0b2447, #132347);
+    }
+
+    .landing h2 {
+      font-size: 18px;
+      color: var(--text-light);
+    }
+
+    .landing h1 {
+      font-size: 48px;
+      color: var(--primary);
+      margin: 10px 0;
+    }
+
+    .landing p {
+      font-size: 18px;
+      color: #aaa;
+    }
+
+    .btn-group {
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      font-weight: bold;
+      border-radius: 25px;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #000;
+      border: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0003;
+      margin-bottom: 30px;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    ul {
+      padding-left: 40px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #08142c;
+      padding: 30px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    img.profile {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--primary);
+      margin-right: 20px;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .certificates {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .certificate-item {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background: var(--card);
+      padding: 15px;
+      border-radius: 10px;
+      width: 280px;
+      text-align: center;
+    }
+
+    .certificate-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .certificate-item p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .certificates::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .certificates::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dadan Ramdan Hidayat</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#github">GitHub</a>
+      <a href="#certificate">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="landing" id="home">
+    <h2>Hello, I'm</h2>
+    <h1>Dadan Ramdan Hidayat</h1>
+    <p>Mahasiswa Sains Data | Data Analyst | UI/UX Dashboard Designer</p>
+    <div class="btn-group">
+      <a href="#projects"><button class="btn primary">Lihat Proyek</button></a>
+      <a href="#contact"><button class="btn">Kontak Saya</button></a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="flex">
+      <img src="profil.jpg" alt="Foto Profil" class="profile" />
+      <p>
+        Halo! Saya <strong>Dadan Ramdan Hidayat</strong>, mahasiswa <strong>Institut Teknologi Sains Bandung</strong> jurusan <strong>Sains Data</strong>.  
+        Saya terbiasa melakukan <strong>analisis data</strong>, <strong>visualisasi data</strong>, dan merancang <strong>dashboard interaktif</strong> berbasis <em>UI/UX</em> menggunakan <em>Flexdashboard</em>, <em>Shiny</em>, dan alat lainnya.
+        Saya aktif mengembangkan diri melalui berbagai pelatihan dan proyek.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+      <h3>Dashboard Analisis Data</h3>
+      <p>Analisis dan visualisasi data dengan Shiny dan Flexdashboard.<br>
+      <a href="https://rpubs.com/Ramdan" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+    <div class="card">
+      <h3>Survey Akademik Mahasiswa</h3>
+      <p>UI/UX dashboard untuk survei kepuasan mahasiswa.<br>
+      <a href="https://namakamu.shinyapps.io/survei-mahasiswa" target="_blank">Lihat Dashboard &raquo;</a></p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>Python (Pandas, Matplotlib, Scikit-learn)</li>
+      <li>R (tidyverse, ggplot2, Shiny, Flexdashboard)</li>
+      <li>SQL & Data Wrangling</li>
+      <li>Dashboard Design (Flexdashboard, Tableau)</li>
+      <li>Data Analysis & Visualization</li>
+    </ul>
+  </section>
+
+  <section id="github">
+    <h2>GitHub</h2>
+    <div class="card">
+      <h3>Repositori & Source Code</h3>
+      <p>Lihat proyek dan eksperimen saya di:<br>
+      <a href="https://github.com/DadanRamdanHidayat" target="_blank">github.com/DadanRamdanHidayat</a></p>
+    </div>
+  </section>
+
+  <section id="certificate">
+    <h2>Certificates</h2>
+    <div class="certificates">
+      <div class="certificate-item">
+        <img src="DQLab Data Science.jpeg" alt="Certificate DQLab R">
+        <p><strong>DQLab - Introduction to Data Science with R</strong><br>Sertifikat pelatihan dasar Data Science menggunakan bahasa R, mencakup manipulasi data dan visualisasi.</p>
+      </div>
+      <div class="certificate-item">
+        <img src="DQLab Data Analys.jpeg" alt="Certificate DQLab Excel">
+        <p><strong>DQLab - Study Case Bootcamp Data Analyst with Excel</strong><br>Studi kasus analisis data menggunakan Excel dan teknik visualisasi dasar serta pengolahan data tabular.</p>
+      </div>
+      <div class="certificate-item">
+        <img src="RevoU Data Analys.jpeg" alt="Certificate RevoU">
+        <p><strong>RevoU - Intro to Data Analytics</strong><br>Mini course pengantar Data Analytics, meliputi dasar-dasar statistik, SQL, dan visualisasi data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hidayatramdan808@gmail.com">hidayatramdan808@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/dadan-ramdan-hidayat-381789316" target="_blank">linkedin.com/in/dadan-ramdan-hidayat</a></p>
+    <p>GitHub: <a href="https://github.com/DadanRamdanHidayat" target="_blank">github.com/DadanRamdanHidayat</a></p>
+    <p><a href="CV DADAN RAMDAN HIDAYAT.pdf" download>⬇ Unduh CV Saya</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Dadan Ramdan Hidayat • Dibuat dengan semangat dan HTML
+  </footer>
+
+ <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
