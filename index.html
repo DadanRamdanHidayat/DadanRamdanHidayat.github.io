@@ -119,6 +119,12 @@
       margin-top: 15px;
     }
 
+     /* Section Projects: horizontal scroll */
+    #projects .cards { display: flex; overflow-x: auto; gap: 20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 10px; }
+    #projects .card { flex: 0 0 280px; background: var(--card); padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #0003; scroll-snap-align: start; }
+    #projects .card img { width:100%; border-radius:10px; margin:15px 0; }
+    #projects .card p { color: var(--text-light); }
+
     ul {
       padding-left: 40px;
     }
@@ -248,22 +254,24 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>My Projects</h2>
-     <div class="card">
-      <h3>Analisis & Strategi Penjualan E - Commerce 6 Bulan Terakhir</h3>
-      <p>Laporan Analisis & Strategi Penjualan E - Commerce 6 Bulan Terakhir.<br>
-      <a href="https://rpubs.com/Ramdan/1324993" target="_blank">Lihat di RPubs &raquo;</a></p>
-    </div>
-    <div class="card">
-      <h3>Dashboard Analisis Data</h3>
-      <p>Analisis dan visualisasi data dengan Shiny dan Flexdashboard.<br>
-      <a href="https://rpubs.com/Ramdan/1322294" target="_blank">Lihat di RPubs &raquo;</a></p>
-    </div>
-    <div class="card">
-      <h3>Aplikasi Survei Kepuasan dan Perilaku Belanja Konsumen Online untuk Mahasiswa Universitas</h3>
-      <p>UI/UX dashboard untuk Aplikasi Survei Kepuasan dan Perilaku Belanja Konsumen Online untuk Mahasiswa Universitas.<br>
-      <a href="https://dadanramdan.shinyapps.io/Dashboard/" target="_blank">Lihat Dashboard &raquo;</a></p>
+    <div class="cards">
+      <div class="card">
+        <h3>Analisis & Strategi Penjualan E‑Commerce</h3>
+        <img src="penjualane.jpg" alt="Visualisasi Penjualan E‑Commerce">
+        <p>Laporan Analisis & Strategi Penjualan E‑Commerce 6 Bulan Terakhir.<br><a href="https://rpubs.com/Ramdan/1324993" target="_blank">Lihat di RPubs &raquo;</a></p>
+      </div>
+      <div class="card">
+        <h3>Dashboard Analisis Data Survey</h3>
+        <img src="dashboard1.jpg" alt="Dashboard Analisis">
+        <p>Analisis dan visualisasi data dengan Shiny dan Flexdashboard.<br><a href="https://rpubs.com/Ramdan/1322294" target="_blank">Lihat di RPubs &raquo;</a></p>
+      </div>
+      <div class="card">
+        <h3>Aplikasi Survei Kepuasan Konsumen Online</h3>
+        <img src="shiny1.jpg" alt="Dashboard Survei">
+        <p>UI/UX dashboard untuk survei kepuasan & perilaku belanja mahasiswa.<br><a href="https://dadanramdan.shinyapps.io/Dashboard/" target="_blank">Lihat Dashboard &raquo;</a></p>
+      </div>
     </div>
   </section>
 
