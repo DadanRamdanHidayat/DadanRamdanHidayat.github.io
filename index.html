@@ -105,6 +105,44 @@
       display: inline-block;
     }
 
+    #data-analysis-process .cards {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+     padding-bottom: 10px;
+    }
+
+    #data-analysis-process .card {
+     flex: 0 0 280px;
+     background: var(--card);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px #0003;
+     scroll-snap-align: start;
+    }
+
+    #data-analysis-process .card img {
+     width: 100%;
+     border-radius: 10px;
+     margin: 15px 0;
+    }
+
+    #data-analysis-process .card p {
+     color: var(--text-light);
+    }
+
+    #data-analysis-process .cards::-webkit-scrollbar {
+     height: 8px;
+    }
+
+    #data-analysis-process .cards::-webkit-scrollbar-thumb {
+     background: var(--primary);
+     border-radius: 4px;
+    }
+
+
+
     .card {
       background: var(--card);
       padding: 20px;
@@ -119,33 +157,32 @@
       margin-top: 15px;
     }
 
-    #projects .cards {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 10px;
+   #projects .cards {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+     padding-bottom: 10px;
     }
 
-    #projects .card {
-      flex: 0 0 280px;
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #0003;
-      scroll-snap-align: start;
+#projects .card {
+     flex: 0 0 280px;
+     background: var(--card);
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px #0003;
     }
 
-    #projects .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin: 15px 0;
+#projects .card img {
+     width: 100%;
+     border-radius: 10px;
+     margin: 15px 0;
     }
 
-    #projects .card p {
-      color: var(--text-light);
+#projects .card p {
+     color: var(--text-light);
     }
+
 
     ul {
       padding-left: 40px;
@@ -246,6 +283,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#data analysis process">Data Analysis Process</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#github">GitHub</a>
@@ -276,26 +314,83 @@
     </div>
   </section>
 
-  <section id="projects" class="fade-in">
-    <h2>My Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Analisis & Strategi Penjualan E‑Commerce</h3>
-        <img src="penjualane.jpg" alt="Visualisasi Penjualan E‑Commerce">
-        <p>Laporan Analisis & Strategi Penjualan E‑Commerce 6 Bulan Terakhir.<br><a href="https://rpubs.com/Ramdan/1324993" target="_blank">Lihat di RPubs &raquo;</a></p>
-      </div>
-      <div class="card">
-        <h3>Dashboard Analisis Data Survey</h3>
-        <img src="dashboard1.jpg" alt="Dashboard Analisis">
-        <p>Analisis dan visualisasi data dengan Shiny dan Flexdashboard.<br><a href="https://rpubs.com/Ramdan/1322294" target="_blank">Lihat di RPubs &raquo;</a></p>
-      </div>
-      <div class="card">
-        <h3>Aplikasi Survei Kepuasan Konsumen Online</h3>
-        <img src="shiny1.jpg" alt="Dashboard Survei">
-        <p>UI/UX dashboard untuk survei kepuasan & perilaku belanja mahasiswa.<br><a href="https://dadanramdan.shinyapps.io/Dashboard/" target="_blank">Lihat Dashboard &raquo;</a></p>
-      </div>
+   <section id="data-analysis-process" class="fade-in">
+  <h2>Data Analysis Process</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Pemusatan Data</h3>
+      <img src="pemusatandata.jpg" alt="Pemusatan Data">
+      <p>Pemusatan data adalah cara untuk menggambarkan nilai tengah atau representatif dari suatu kumpulan data. Contohnya: mean (rata-rata), median, dan modus.<br><a href="https://rpubs.com/Ramdan/1249239" target="_blank">Lihat di RPubs &raquo;</a></p>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Data Cleaning</h3>
+      <img src="dataclening.jpg" alt="Data Cleaning">
+      <p>Data cleaning adalah proses membersihkan data dari kesalahan, duplikasi, nilai kosong, atau data tidak konsisten agar siap dianalisis.<br><a href="https://rpubs.com/Ramdan/1322102" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Mengatasi MoE</h3>
+      <img src="MOE.jpg" alt="Mengatasi MoE">
+      <p>Dalam proses EDA, data diambil lewat ETL lalu dibersihkan, dianalisis, dan dievaluasi menggunakan RMSE, MAE, dan KPI untuk meminimalkan Margin of Error (MoE).<br><a href="https://rpubs.com/Ramdan/1281877" target="_blank">Lihat Dashboard &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>MoE: Probability vs Non-Probability Sampling</h3>
+      <img src="pataubukanp.jpg" alt="Perbandingan Sampling">
+      <p>Sampling probabilistik memiliki MoE yang bisa dihitung secara valid, sementara non-probability sampling cenderung tidak valid dan rentan bias.<br><a href="https://rpubs.com/Ramdan/1282179" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Data Transformation</h3>
+      <img src="tranformasidata.jpg" alt="Data Transformation">
+      <p>Transformasi data seperti mengubah tipe data, membuat kolom baru, hingga standarisasi nilai dilakukan agar data siap dianalisis.<br><a href="https://rpubs.com/Ramdan/1303887" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Data Visualization</h3>
+      <img src="visualdata.jpg" alt="Visualisasi Data">
+      <p>Visualisasi menyajikan data dalam bentuk grafik atau chart untuk menampilkan pola dan tren agar mudah dipahami.<br><a href="https://rpubs.com/Ramdan/1313905" target="_blank">Lihat Dashboard &raquo;</a></p>
+    </div>
+
+  </div>
+</section>
+
+ <section id="projects" class="fade-in">
+  <h2>My Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Analisis & Strategi Penjualan E‑Commerce</h3>
+      <img src="penjualane.jpg" alt="Visualisasi Penjualan E‑Commerce">
+      <p>Laporan Analisis & Strategi Penjualan E‑Commerce 6 Bulan Terakhir.<br><a href="https://rpubs.com/Ramdan/1324993" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>STR Business Plan: Short Term Rental Apartments in Jakarta</h3>
+      <img src="STR.jpg" alt="STR Business Plan: Short Term Rental Apartments in Jakarta">
+      <p>Rencana Bisnis STR: Apartemen Sewa Jangka Pendek di Jakarta.<br><a href="https://rpubs.com/Ramdan/1306200" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Amazon Prime Titles Analysis</h3>
+      <img src="amazon.jpg" alt="Amazon Prime Titles Analysis">
+      <p>Eksplorasi data judul Amazon Prime untuk melihat distribusi kategori, tahun rilis, dan negara asal menggunakan R.<br><a href="https://rpubs.com/Ramdan/1311326" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard Analisis Data Survey</h3>
+      <img src="dashboard1.jpg" alt="Dashboard Analisis">
+      <p>Analisis dan visualisasi data dengan Shiny dan Flexdashboard.<br><a href="https://rpubs.com/Ramdan/1322294" target="_blank">Lihat di RPubs &raquo;</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Aplikasi Survei Kepuasan Konsumen Online</h3>
+      <img src="shiny1.jpg" alt="Dashboard Survei">
+      <p>UI/UX dashboard untuk survei kepuasan & perilaku belanja mahasiswa.<br><a href="https://dadanramdan.shinyapps.io/Dashboard/" target="_blank">Lihat Dashboard &raquo;</a></p>
+    </div>
+  </div>
+</section>
 
 <section style="background:#0b2447; padding:60px 20px; display:flex; align-items:flex-start;">
   <!-- Bagian My Skills di kiri -->
