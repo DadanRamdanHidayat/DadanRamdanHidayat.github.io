@@ -6,275 +6,290 @@
   <title>Dadan Ramdan Hidayat | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
-  <style>
-    :root {
-      --primary: #4fc3f7;
-      --bg: #0b2447;
-      --card: #132347;
-      --text-light: #b0c4de;
-    }
+ <style>
+  /* ====== Variabel Warna Utama ====== */
+  :root {
+    --primary: #4fc3f7;       /* Warna biru utama */
+    --bg: #0b2447;            /* Warna latar belakang halaman */
+    --card: #132347;          /* Warna latar belakang kartu */
+    --text-light: #b0c4de;    /* Warna teks abu-abu muda */
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: white;
-      scroll-behavior: smooth;
-    }
+  /* ====== Pengaturan Body ====== */
+  body {
+    margin: 0;                           /* Hilangkan margin default */
+    font-family: 'Poppins', sans-serif;  /* Gunakan font Poppins */
+    background: var(--bg);               /* Gunakan warna latar belakang dari variabel */
+    color: white;                        /* Warna teks default putih */
+    scroll-behavior: smooth;              /* Scroll halus */
+  }
 
+  /* ====== Header ====== */
+  header {
+    background: #19376d;                  /* Warna latar header */
+    padding: 15px 30px;                   /* Padding dalam header */
+    display: flex;                        /* Flexbox untuk susunan elemen */
+    justify-content: space-between;       /* Jarak antar elemen kiri-kanan */
+    align-items: center;                  /* Posisikan elemen di tengah vertikal */
+    flex-wrap: wrap;                       /* Elemen akan turun jika layar kecil */
+  }
+
+  header h1 {
+    color: var(--primary);                 /* Warna teks biru utama */
+    font-size: 24px;                       /* Ukuran font */
+    margin: 0;                             /* Hilangkan margin default */
+  }
+
+  /* ====== Navigasi ====== */
+  nav a {
+    color: white;                          /* Warna link putih */
+    text-decoration: none;                 /* Hilangkan garis bawah */
+    margin: 0 15px;                        /* Jarak antar link */
+    font-weight: 600;                      /* Tebalkan font */
+  }
+
+  nav a:hover {
+    color: var(--primary);                 /* Warna berubah saat hover */
+  }
+
+  /* ====== Landing Section (Bagian Awal) ====== */
+  .landing {
+    padding: 100px 20px;                   /* Ruang dalam besar */
+    text-align: center;                    /* Teks rata tengah */
+    background: linear-gradient(to bottom, #0b2447, #132347); /* Gradasi warna */
+  }
+
+  .landing h2 {
+    font-size: 18px;
+    color: var(--text-light);               /* Teks abu-abu muda */
+  }
+
+  .landing h1 {
+    font-size: 48px;
+    color: var(--primary);
+    margin: 10px 0;
+  }
+
+  .landing p {
+    font-size: 18px;
+    color: #aaa;
+  }
+
+  /* ====== Tombol ====== */
+  .btn-group {
+    margin-top: 30px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn.primary {
+    background: var(--primary);
+    color: #000;
+    border: none;
+  }
+
+  /* ====== Section Umum ====== */
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  section h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+
+  /* ====== Data Analysis Process Cards ====== */
+  #data-analysis-process .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  #data-analysis-process .card {
+    flex: 0 0 280px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0003;
+    scroll-snap-align: start;
+  }
+
+  #data-analysis-process .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  #data-analysis-process .card p {
+    color: var(--text-light);
+  }
+
+  #data-analysis-process .cards::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  #data-analysis-process .cards::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  /* ====== Card Umum ====== */
+  .card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0003;
+    margin-bottom: 30px;
+  }
+
+  .card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+
+  /* ====== Project Cards ====== */
+  #projects .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  #projects .card {
+    flex: 0 0 280px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0003;
+  }
+
+  #projects .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  #projects .card p {
+    color: var(--text-light);
+  }
+
+  /* ====== List ====== */
+  ul {
+    padding-left: 40px;
+  }
+
+  ul li {
+    margin-bottom: 8px;
+  }
+
+  /* ====== Footer ====== */
+  footer {
+    background: #08142c;
+    padding: 30px;
+    text-align: center;
+    color: #aaa;
+  }
+
+  /* ====== Link ====== */
+  a {
+    color: var(--primary);
+  }
+
+  /* ====== Foto Profil ====== */
+  img.profile {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--primary);
+    margin-right: 20px;
+  }
+
+  /* ====== Flexbox Util ====== */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* ====== Sertifikat ====== */
+  .certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .certificate-item {
+    flex: 0 0 280px;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 10px #0003;
+    margin-bottom: 30px;
+  }
+
+  .certificate-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .certificate-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-light);
+  }
+
+  .certificates::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .certificates::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  /* ====== Animasi Fade In ====== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ====== Responsif Mobile ====== */
+  @media (max-width: 600px) {
     header {
-      background: #19376d;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
-    header h1 {
-      color: var(--primary);
-      font-size: 24px;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    .landing {
-      padding: 100px 20px;
-      text-align: center;
-      background: linear-gradient(to bottom, #0b2447, #132347);
-    }
-
-    .landing h2 {
-      font-size: 18px;
-      color: var(--text-light);
-    }
-
-    .landing h1 {
-      font-size: 48px;
-      color: var(--primary);
-      margin: 10px 0;
-    }
-
-    .landing p {
-      font-size: 18px;
-      color: #aaa;
-    }
-
-    .btn-group {
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      margin: 5px;
-      font-weight: bold;
-      border-radius: 25px;
-      border: 2px solid var(--primary);
-      background: transparent;
-      color: white;
-      cursor: pointer;
-    }
-
-    .btn.primary {
-      background: var(--primary);
-      color: #000;
-      border: none;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      color: var(--primary);
-      font-size: 28px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--primary);
-      display: inline-block;
-    }
-
-    #data-analysis-process .cards {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 20px;
-     padding-bottom: 10px;
-    }
-
-    #data-analysis-process .card {
-     flex: 0 0 280px;
-     background: var(--card);
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px #0003;
-     scroll-snap-align: start;
-    }
-
-    #data-analysis-process .card img {
-     width: 100%;
-     border-radius: 10px;
-     margin: 15px 0;
-    }
-
-    #data-analysis-process .card p {
-     color: var(--text-light);
-    }
-
-    #data-analysis-process .cards::-webkit-scrollbar {
-     height: 8px;
-    }
-
-    #data-analysis-process .cards::-webkit-scrollbar-thumb {
-     background: var(--primary);
-     border-radius: 4px;
-    }
-
-
-
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #0003;
-      margin-bottom: 30px;
-    }
-
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-   #projects .cards {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 20px;
-     padding-bottom: 10px;
-    }
-
-#projects .card {
-     flex: 0 0 280px;
-     background: var(--card);
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px #0003;
-    }
-
-#projects .card img {
-     width: 100%;
-     border-radius: 10px;
-     margin: 15px 0;
-    }
-
-#projects .card p {
-     color: var(--text-light);
-    }
-
-
-    ul {
-      padding-left: 40px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    footer {
-      background: #08142c;
-      padding: 30px;
-      text-align: center;
-      color: #aaa;
-    }
-
-    a {
-      color: var(--primary);
-    }
-
-    img.profile {
-      width: 150px;
-      border-radius: 50%;
-      box-shadow: 0 0 12px var(--primary);
-      margin-right: 20px;
-    }
-
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .certificates {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding-bottom: 10px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .certificate-item {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      background: var(--card);
-      padding: 15px;
-      border-radius: 10px;
-      width: 280px;
-      text-align: center;
-    }
-
-    .certificate-item img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-
-    .certificate-item p {
-      margin-top: 10px;
-      font-size: 14px;
-      color: var(--text-light);
-    }
-
-    .certificates::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .certificates::-webkit-scrollbar-thumb {
-      background: var(--primary);
-      border-radius: 4px;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
@@ -466,6 +481,22 @@
         <img src="RevoU Data Analys.jpeg" alt="Certificate RevoU">
         <p><strong>RevoU - Intro to Data Analytics</strong><br>Mini course pengantar Data Analytics, meliputi dasar-dasar statistik, SQL, dan visualisasi data.</p>
       </div>
+      <div class="certificate-item">
+         <img src="SECC_RevoU.jpg" alt="Certificate RevoU Software Engineering">
+         <p><strong>RevoU - Intro to Software Engineering</strong><br>Kursus pengenalan Software Engineering selama 1 minggu, membahas konsep dasar pengembangan perangkat lunak dan praktik terbaik industri.</p>
+      </div>
+      <div class="certificate-item">
+         <img src="Certificate SCADS.jpg" alt="Certificate SCADS SQL">
+         <p><strong>SCADS Mini Course - Belajar SQL Tanpa Jago Ngoding</strong><br>Pelatihan singkat SQL yang diadakan oleh SCADS dan StarCore Analytics, fokus pada dasar-dasar query SQL untuk analisis data.</p>
+      </div>
+      <div class="certificate-item">
+         <img src="Dadan Ramdan Hidayat_CodingStudio.jpg" alt="Certificate Coding Studio">
+         <p><strong>Coding Studio - Belajar Coding dari Nol untuk Pemula</strong><br>Kelas gratis pengenalan coding untuk pemula, membahas logika pemrograman dan dasar-dasar bahasa pemrograman.</p>
+     </div>
+     <div class="certificate-item">
+         <img src="IBMDesignDadan.jpg" alt="Certificate IBM SkillsBuild">
+         <p><strong>IBM SkillsBuild - Data Classification and Summarization Using IBM Granite</strong><br>Pelatihan penggunaan IBM Granite untuk mengklasifikasi dan merangkum data, dengan fokus pada penerapan praktis AI.</p>
+     </div>
     </div>
   </section>
 
@@ -517,8 +548,54 @@
     fadeEls.forEach(el => observer.observe(el));
   </script>
 
-</body>
-</html>
+<!-- ...existing code... -->
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Tambahkan script interaktif di bawah ini -->
+  <script>
+    function enableImageModal(selector) {
+      document.querySelectorAll(selector).forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+          const modal = document.createElement('div');
+          modal.style.position = 'fixed';
+          modal.style.top = 0;
+          modal.style.left = 0;
+          modal.style.width = '100vw';
+          modal.style.height = '100vh';
+          modal.style.background = 'rgba(0,0,0,0.8)';
+          modal.style.display = 'flex';
+          modal.style.alignItems = 'center';
+          modal.style.justifyContent = 'center';
+          modal.style.zIndex = 9999;
+          modal.innerHTML = `
+            <img src="${img.src}" style="max-width:90vw; max-height:90vh; border-radius:12px;">
+            <span style="position:absolute;top:30px;right:40px;font-size:40px;color:#fff;cursor:pointer;">&times;</span>
+          `;
+          document.body.appendChild(modal);
+          modal.querySelector('span').onclick = () => modal.remove();
+          modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        });
+      });
+    }
+
+    // Aktifkan modal untuk gambar di semua card dan sertifikat
+    enableImageModal('.card img');
+    enableImageModal('.certificate-item img');
+    enableImageModal('.flex img'); // Untuk gambar skill dan kontak jika mau
+  </script>
+<!-- ...existing code... -->
 </body>
 </html>
